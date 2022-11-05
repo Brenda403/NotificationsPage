@@ -3,92 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Notifications page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
 
-  <main>
+ <div class="container">
     <header>
-      <h1> Notifications <span class="alert"> 3 </span> </h1>
-      <h3 class="read-button"> Mark all as read </h3>
+      <div class="notifications">
+        <h1> Notifications </h1> 
+        <span class="alert">  3  </span>
+      </div>
+      <button onclick="changeBackground()" class="read-button"> Mark all as read </button>
     </header>
+
       <!-- MW -->
-      <div class="webber">
+      <div class="card unread">
         <img src="assets\images\avatar-mark-webber.webp" alt="avatar-mark-webber">
-        <p>
-          <span class="user"> Mark Weber</span> reacted to your recent post <span class="post"> My first tournament today!<span class="dot"></span></span>
-        </p>
-        <small>1m ago</small>
+          <div>
+            <p>
+              <strong class="user"> Mark Weber</strong> reacted to your recent post <b> My first tournament today!<span class="dot"></span></b>
+            </p>
+            <small>1m ago</small>
+        </div>
       </div>
+      <br>
       <!-- AG -->
-      <div class="gray">
+      <div class="card unread">
         <img src="assets\images\avatar-angela-gray.webp" alt="avatar-angela-gray">
-        <p>
-          <span class="user"> Angela Gray</span> followed you
-        </p>
-        <small>5m ago</small>
+        <div>
+            <p>
+              <strong class="user"> Angela Gray</strong> followed you
+            </p>
+            <small>5m ago</small>
+        </div>
       </div>
-
+      <br>
       <!-- JT -->
-      <div class="thompson">
-        <p>
-          <span class="user"> Jacob Thompson</span> has joined your group <span class="group">Chess Club</span>
-        </p>
-        <small>1 day ago</small>
+      <div class="card unread">
+        <img src="assets\images\avatar-jacob-thompson.webp" alt="avatar-jacob-thompson">
+          <div>
+            <p>
+              <strong class="user"> Jacob Thompson</strong> has joined your group <span class="group">Chess Club</span>
+            </p>
+            <small>1 day ago</small>
+          </div> 
       </div>
-
+      <br>
       <!-- RH -->
-      <div class="hasanuddin">
-        <p>
-          <span class="user"> Rizky Hasanuddin </span> sent you a private message
-        </p>
-        <div class="message">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-          I'm already having lots of fun and improving my game.</div>
-        <small>5 days ago</small>
+      <div class="card">
+        <img src="assets\images\avatar-rizky-hasanuddin.webp" alt="avatar-rizky-hasanuddin">
+          <div>
+            <p>
+              <strong class="user"> Rizky Hasanuddin </strong> sent you a private message
+            </p>
+            <small>5 days ago</small>
+          </div>
       </div>
-
+      <div class="message">
+        <p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+        I'm already having lots of fun and improving my game.</p>
+      </div>
+      <br>
       <!-- KS -->
-      <div class="smith">
-        <p>
-          <span class="user"> Kimberly Smith </span>commented on your picture <span><img src="assets\images\image-chess.webp" alt="woman playing chess"></span>
-        </p>
-        <small>1 week ago</small>
+      <div class="card">
+        <img src="assets\images\avatar-kimberly-smith.webp" alt="avatar-kimberly-smith">
+          <div>
+            <p>
+              <strong class="user"> Kimberly Smith </strong>commented on your picture 
+            </p>
+            <small>1 week ago</small>
+          </div>
+          <img class="image-chess"src="assets\images\image-chess.webp" alt="woman playing chess"/>
       </div>
-
+      <br>
        <!-- NP --> 
-      <div class="peterson">
-        <p>
-          <span class="user"> Nathan Peterson </span> reacted to your recent post <span class="event">5 end-game strategies to increase your win rate <span class="dot"></span></span>
-        </p>
-        <small>2 weeks ago</small>
-      </div>
-
+      <div class="card">
+        <img src="assets\images\avatar-nathan-peterson.webp" alt="avatar-nathan-peterson">
+          <div>
+            <p>
+              <strong class="user"> Nathan Peterson </strong> reacted to your recent post <span class="event"> <b>5 end-game strategies to increase your win rate</b> <span class="dot"></span></span>
+            </p>
+            <small>2 weeks ago</small>
+          </div>
+      </div> 
+      <br>
        <!-- AK --> 
-      <div class="kim">
-        <p>
-          <span class="user"> Anna Kim</span> left the group <span class="group"> Chess Club</span>
-        </p>
-        <small>2 weeks ago</small>
+      <div class="card">
+        <img src="assets\images\avatar-anna-kim.webp" alt="avatar-anna-kim">
+          <div>
+            <p>
+              <strong class="user"> Anna Kim</strong> left the group <span class="group"><b> Chess Club </b></span>
+            </p>
+            <small>2 weeks ago</small>
+          </div>
       </div>
-  
-  </main>
+      <br>
+
+      <!-- attribution -->
+
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Brenda Escobedo</a>.
+      </div>
+      
+ 
 
 
-  
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Brenda Escobedo</a>.
-  </div>
+<script src="./app.js"></script>
 </body>
 </html>

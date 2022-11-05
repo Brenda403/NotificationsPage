@@ -1,0 +1,114 @@
+:root {
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+  }
+
+* {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  @media screen and (max-width:550px) {
+    .container{
+      margin: 0;
+    }
+  }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--Very-light-grayish-blue);
+    color: var(--Dark-grayish-blue);
+  }
+
+  .container {
+    justify-content: center;
+    margin: 2rem;
+    width: 700px;
+    background-color: var(--White);
+    padding: 1.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  .notifications {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .alert {
+    background-color: var(--Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--White);
+    height: 30px;
+    width: 30px;
+    font-weight: 800;
+    border-radius: .5rem;
+    margin-left: 1rem;
+  }
+
+
+  .read-button {
+    align-items: right;
+    border: none;
+    background: none;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  button {
+    font-family : inherit;
+    font-size: 1em;
+  }
+
+  strong {
+    color: black;
+  }
+
+  .card {
+    border-radius: 15px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .unread {
+    background-color: var(--Light-grayish-blue-1);
+  }
+
+  .message {
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--Grayish-blue); 
+    padding: 1rem;
+    margin: 0 0 0 5rem;
+   
+  }
+
+  .image-chess {
+    margin-left: auto;
+  }
+
+  img {
+    width: 50px;;
+  }
